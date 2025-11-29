@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nano-Banana Pro 开发者指南</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <span>🍌</span> Nano-Banana Pro
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#intro" class="nav-link active"><span>👋</span> 简介</a></li>
+            <li class="nav-item"><a href="#rules" class="nav-link"><span>0.</span> 黄金法则</a></li>
+            <li class="nav-item"><a href="#text" class="nav-link"><span>1.</span> 文本渲染</a></li>
+            <li class="nav-item"><a href="#character" class="nav-link"><span>2.</span> 角色一致性</a></li>
+            <li class="nav-item"><a href="#grounding" class="nav-link"><span>3.</span> 搜索赋能</a></li>
+            <li class="nav-item"><a href="#editing" class="nav-link"><span>4.</span> 高级编辑</a></li>
+            <li class="nav-item"><a href="#dim" class="nav-link"><span>5.</span> 维度转换</a></li>
+            <li class="nav-item"><a href="#res" class="nav-link"><span>6.</span> 高分辨率</a></li>
+            <li class="nav-item"><a href="#think" class="nav-link"><span>7.</span> 思考与推理</a></li>
+            <li class="nav-item"><a href="#story" class="nav-link"><span>8.</span> 故事板</a></li>
+            <li class="nav-item"><a href="#struct" class="nav-link"><span>9.</span> 结构控制</a></li>
+            <li class="nav-item"><a href="#next" class="nav-link"><span>10.</span> 下一步</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero -->
+        <section id="intro" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="tagline">v2.0 开发者指南</span>
+                    <h1>从“娱乐”到<br>“专业生产力”</h1>
+                    <p>Nano-Banana Pro 代表了生成式 AI
+                        的一次重大飞跃。它不再局限于生成有趣的图片，而是专注于提供<strong>功能性</strong>的专业资产生产能力。在文本渲染、角色一致性、视觉合成及世界知识方面拥有 SOTA 级表现。
+                    </p>
+                    <img src="assets/hero_banner.png" class="feature-img" alt="Hero Banner">
+                </div>
+            </div>
+        </section>
+
+        <!-- 0. Golden Rules -->
+        <section id="rules">
+            <div class="container">
+                <h2>第0章：提示词黄金法则</h2>
+                <p>停止使用“标签堆砌”（Tag Soups）。Nano-Banana Pro 是一个会思考的模型，请像创意总监一样与它沟通。</p>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>✏️ 修改，不重随</h3>
+                        <p>如果图片 80% 是完美的，不要重新生成。直接告诉模型："这很好，但把光线改成日落"。</p>
+                    </div>
+                    <div class="card">
+                        <h3>🗣️ 使用自然语言</h3>
+                        <p>❌ 坏：酷车，霓虹，8k<br>✅ 好：一张充满电影感的广角镜头，展示一辆未来派跑车...</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎯 具体且描述性</h3>
+                        <p>定义材质、光线和情绪。不要说"一个女人"，要说"一位身穿复古香奈儿套装的优雅女士"。</p>
+                    </div>
+                    <div class="card">
+                        <h3>💡 提供语境</h3>
+                        <p>告诉模型"为什么"做这张图。例如："为一本高端美食杂志制作一张三明治图片"。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Text Rendering -->
+        <section id="text">
+            <div class="container">
+                <h2>第1章：文本渲染与视觉合成</h2>
+                <p>生成清晰、风格化的文本，并将复杂信息压缩为视觉图表。</p>
+
+                <div class="grid-2">
+                    <div>
+                        <ul class="check-list">
+                            <li><strong>压缩:</strong> 将 PDF 内容转化为视觉辅助图像。</li>
+                            <li><strong>风格:</strong> 指定"技术图纸"或"手绘白板"。</li>
+                            <li><strong>引用:</strong> 清晰标注需要渲染的文本。</li>
+                        </ul>
+                        <div class="prompt-box">
+                            <div class="prompt-header">
+                                <span>PROMPT: 财报信息图</span>
+                                <button class="copy-btn">COPY</button>
+                            </div>
+                            <div class="prompt-content">
+                                "生成一张干净、现代的信息图表，总结这份财报的关键财务亮点。包含'收入增长'和'净利润'的图表，并在一个风格化的引用框中突出 CEO 的关键语录。"
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="assets/feature_text.png" class="feature-img" alt="Text Rendering">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Character Consistency -->
+        <section id="character">
+            <div class="container">
+                <h2>第2章：角色一致性</h2>
+                <p>利用"身份锁定"技术，支持最多 14 张参考图，确保角色在不同场景下面部特征完全一致。</p>
+
+                <div class="grid-2">
+                    <div>
+                        <img src="assets/feature_consistency.png" class="feature-img" alt="Consistency">
+                    </div>
+                    <div>
+                        <h3>核心技巧</h3>
+                        <ul class="check-list">
+                            <li><strong>身份锁定:</strong> "保持面部特征与图1完全一致"。</li>
+                            <li><strong>病毒式构图:</strong> 一次性生成主体+文字+图形。</li>
+                        </ul>
+                        <div class="prompt-box">
+                            <div class="prompt-header">
+                                <span>PROMPT: 病毒视频封面</span>
+                                <button class="copy-btn">COPY</button>
+                            </div>
+                            <div class="prompt-content">
+                                "使用图1中的人物设计一个病毒视频缩略图。保持面部一致，表情兴奋。人物在左侧指着右侧的牛油果吐司。添加黄色箭头和波普风格大字：'3分钟搞定!'。"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Grounding -->
+        <section id="grounding">
+            <div class="container">
+                <h2>第3章：谷歌搜索赋能</h2>
+                <p>利用实时数据生成图像，减少幻觉。</p>
+                <div class="card">
+                    <h3>🌍 实时数据可视化</h3>
+                    <p>模型会先"思考"并搜索相关信息，再生成图像。</p>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span>PROMPT: 事件规划</span>
+                            <button class="copy-btn">COPY</button>
+                        </div>
+                        <div class="prompt-content">
+                            "根据当前的旅游趋势，生成一张2025年美国国家公园最佳游览时间的信息图。"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Advanced Editing -->
+        <section id="editing">
+            <div class="container">
+                <h2>第4章：高级编辑与修复</h2>
+                <p>通过对话式提示进行重绘 (In-painting)、修复和上色。</p>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>🎨 语义编辑</h3>
+                        <p>无需遮罩，直接对话。</p>
+                        <div class="prompt-box">
+                            <div class="prompt-content">
+                                "移除背景中的游客，并用鹅卵石路面填充。"
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>🖌️ 漫画上色</h3>
+                        <p>黑白转彩色，保持风格。</p>
+                        <div class="prompt-box">
+                            <div class="prompt-content">
+                                "给这张漫画上色，使用鲜艳的动漫色调，光束为霓虹蓝。"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Dimensional Translation -->
+        <section id="dim">
+            <div class="container">
+                <h2>第5章：维度转换 (2D ↔ 3D)</h2>
+                <p>将平面设计转化为空间可视化，或将 Meme 转化为 3D 渲染。</p>
+                <div class="grid-2">
+                    <div>
+                        <div class="prompt-box">
+                            <div class="prompt-header">
+                                <span>PROMPT: 2D 转 3D</span>
+                                <button class="copy-btn">COPY</button>
+                            </div>
+                            <div class="prompt-content">
+                                "基于上传的 2D 平面图，生成一张专业的室内设计展示板。包含起居区广角透视和俯视图。风格：现代极简，暖色橡木地板。"
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="assets/feature_2d_3d.png" class="feature-img" alt="2D to 3D">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. High Resolution -->
+        <section id="res">
+            <div class="container">
+                <h2>第6章：高分辨率与纹理</h2>
+                <p>原生支持 4K 生成，完美呈现微观细节。</p>
+                <div class="card">
+                    <h3>🌲 4K 纹理生成</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-content">
+                            "利用原生高保真输出，打造一个苔藓森林地面。控制复杂光效，确保每一缕苔藓都以适合 4K 壁纸的分辨率呈现。"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Thinking -->
+        <section id="think">
+            <div class="container">
+                <h2>第7章：思考与推理</h2>
+                <p>模型在生成前会进行视觉推理，适用于解题和逻辑分析。</p>
+                <div class="grid-2">
+                    <div>
+                        <img src="assets/feature_thinking.png" class="feature-img" alt="Thinking Process">
+                    </div>
+                    <div>
+                        <div class="prompt-box">
+                            <div class="prompt-header">
+                                <span>PROMPT: 视觉推理</span>
+                                <button class="copy-btn">COPY</button>
+                            </div>
+                            <div class="prompt-content">
+                                "分析这张房间照片，生成一张'装修前'的图片，展示施工期间的框架和未完成的干墙。"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Storyboarding -->
+        <section id="story">
+            <div class="container">
+                <h2>第8章：单次生成故事板</h2>
+                <p>无需网格，生成连贯的叙事镜头。</p>
+                <img src="assets/feature_storyboard.png" class="feature-img" alt="Storyboard">
+                <div class="prompt-box" style="margin-top: 1rem;">
+                    <div class="prompt-header">
+                        <span>PROMPT: 电影概念艺术</span>
+                        <button class="copy-btn">COPY</button>
+                    </div>
+                    <div class="prompt-content">
+                        "创建一个 9 部分故事，讲述一男一女在奢侈品广告中的故事。人物身份和着装全程保持一致，角度多变。逐张生成 16:9 格式图片。"
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Structural Control -->
+        <section id="struct">
+            <div class="container">
+                <h2>第9章：结构控制</h2>
+                <p>利用草图、线框图或网格严格控制布局。</p>
+                <div class="grid-2">
+                    <div>
+                        <div class="prompt-box">
+                            <div class="prompt-header">
+                                <span>PROMPT: 线框图转 UI</span>
+                                <button class="copy-btn">COPY</button>
+                            </div>
+                            <div class="prompt-content">
+                                "遵循这些线框图准则，为产品创建一个高保真模型。"
+                            </div>
+                        </div>
+                        <div class="prompt-box">
+                            <div class="prompt-header">
+                                <span>PROMPT: 像素艺术</span>
+                                <button class="copy-btn">COPY</button>
+                            </div>
+                            <div class="prompt-content">
+                                "生成一个独角兽像素精灵，适配 64x64 网格。"
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="assets/feature_structure.png" class="feature-img" alt="Structure Control">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Next -->
+        <section id="next">
+            <div class="container">
+                <h2>第10章：下一步</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>🧪 AI Studio</h3>
+                        <p>测试提示词的最快方式。</p>
+                    </div>
+                    <div class="card">
+                        <h3>🛠️ Build Apps</h3>
+                        <p>查看 API Cookbook 获取代码片段。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Simple script to handle copy buttons
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.parentElement.nextElementSibling.innerText;
+                navigator.clipboard.writeText(content);
+                const originalText = btn.innerText;
+                btn.innerText = 'COPIED!';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
